@@ -14,6 +14,8 @@ The Global Superstore analytics team requires an interactive Power BI report tha
 - Visualize global sales distribution by country, market, and time slices with Year & Month slicers.  
 - Navigate a hierarchical breakdown of sales from Market → Region → Country → City → Segment using drill-through filters.
 
+---
+
 ## Project Overview
 
 This repository delivers a complete Power BI solution, covering:
