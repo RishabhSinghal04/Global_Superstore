@@ -4,7 +4,6 @@ An end-to-end analytics solution built on the Global Superstore dataset. Explore
 
 ![Report Overview](images/report_pages.png "Pages of Report")
 
----
 
 ## Problem Statement
 The Global Superstore analytics team requires an interactive Power BI report that empowers stakeholders to:
@@ -14,7 +13,6 @@ The Global Superstore analytics team requires an interactive Power BI report tha
 - Visualize global sales distribution by country, market, and time slices with Year & Month slicers.  
 - Navigate a hierarchical breakdown of sales from Market → Region → Country → City → Segment using drill-through filters.
 
----
 
 ## Project Overview
 
@@ -41,7 +39,6 @@ This repository delivers a complete Power BI solution, covering:
    - Page 3: Geographic Map of sales volumes with Year & Month slicers.
    - Page 4: Flow Chart drill-down across Market → Region → Country → City → Segment, enriched with drill-through filters. 
 
----
 
 ## Dataset
 
@@ -49,7 +46,6 @@ This repository delivers a complete Power BI solution, covering:
 - Source: https://powerbidocs.com/wp-content/uploads/2021/01/global_superstore_2016.xlsx  
 - Primary sheet: **Orders** (51,290 rows; order, customer, product and shipment details)
 
----
 
 ## Data Cleaning & Issue Log
 
@@ -61,7 +57,6 @@ This repository delivers a complete Power BI solution, covering:
 
 ![Issues Log](images/issues/issues_log.png "Summary of data quality issues in Orders sheet")
 
----
 
 ## Data Model
 
@@ -74,7 +69,6 @@ This repository delivers a complete Power BI solution, covering:
 
 ![Data Model View](images/data_model/Model_View.png "Power BI data model showing tables and relationships")
 
----
 
 ## Report Pages
 
@@ -114,7 +108,6 @@ This repository delivers a complete Power BI solution, covering:
 
 ![Flow Chart – Page 4](images/report/Flow_Chart.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
 
----
 
 ## File Structure
 
@@ -143,7 +136,6 @@ This repository delivers a complete Power BI solution, covering:
 └── README.md
 ```
 
----
 
 ## Getting Started
 
@@ -157,5 +149,3 @@ This repository delivers a complete Power BI solution, covering:
     - Navigate dashboard pages
     - Use slicers to filter by region, category, time period, etc.
     - Drill through on any chart to see transaction-level details
-
----
