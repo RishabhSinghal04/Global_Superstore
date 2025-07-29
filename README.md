@@ -63,8 +63,8 @@ This repository delivers a complete Power BI solution, covering:
 | Table          | Grain                          |
 | -------------- | ------------------------------ |
 | **Fact_Sales**   | One row per order–product line |
-| **Dim_Customer** | One row per CustomerID         |
-| **Dim_Product**  | One row per ProductID          |
+| **Dim_Customer** | One row per Customer ID         |
+| **Dim_Product**  | One row per Product ID          |
 | **Dim_Date**     | One row per calendar date      |
 
 ![Data Model View](images/data_model/Model_View.png "Power BI data model showing tables and relationships")
