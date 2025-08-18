@@ -9,8 +9,7 @@
 - [Data Model](#Data-Model)
 - [Report Overview](#Report-Overview)
 - [Results](#Results)
-- [Key Features](#Key-Features)
-- [Tools & Technologies](#Tools-and-Technologies)
+- [Tools and Technologies](#Tools-and-Technologies)
 - [File Structure](#File-Structure)
 - [Getting Started](#Getting-Started)
 
@@ -75,14 +74,19 @@ This repository delivers a complete Power BI solution, covering:
 
 ## Data Model
 
+The analytical model is structured using a star schema, enabling efficient slicing and filtering of sales data across multiple dimensions:
+
 | Table          | Grain                          |
 | -------------- | ------------------------------ |
 | **Fact_Sales**   | One row per order–product line |
-| **Dim_Customer** | One row per Customer ID         |
-| **Dim_Product**  | One row per Product ID          |
+| **Dim_Customers** | One row per Customer ID         |
+| **Dim_Products**  | One row per Product ID          |
 | **Dim_Date**     | One row per calendar date      |
+| **Returns**     | One row per Order ID      |
 
-![Data Model View](images/data_model/Model_View.png "Power BI data model showing tables and relationships")
+![Data Model View](images/data_model/model_view.png "Power BI data model showing tables and relationships")
+
+This structure ensures fast query performance and simplifies the creation of dashboards, reports, and advanced analytics.
 
 
 ## Report Overview
@@ -91,47 +95,91 @@ This repository delivers a complete Power BI solution, covering:
 
 ![Dashboard – Page 1](images/report/executive_summary.png "Page 1: Dashboard showing key metrics and visualizations")
 
-- KPI cards: Total Sales, Total Profit, Profit Margin, Loss Margin, Net Margin, Average Order Value and Profit per Order  
-- Sales & Profit by Region
-- Year-over-year trend (2012–2015)  
-- Segment share breakdown (Consumer, Corporate, Home Office)  
-- Discount band impact on Sales vs. Profit  
+The **Power BI** report opens with a high‑level performance snapshot, combining headline KPIs with regional, temporal, and segment‑based insights.  
+
+- **Headline Metrices** – Total Sales, Total Profit, Profit Margin, Loss Margin, Net Margin, Average Order Value and Profit per Order  
+- **Performance by Region** – Highlights top markets (e.g., Western Europe, Central America) while surfacing growth opportunities in smaller regions.  
+- **Year‑over‑Year Trends** – Shows consistent revenue and profit growth from 2012–2015, reflecting strong upward momentum.  
+- **Customer Segmentation** – Breakdowns by *Consumer*, *Corporate*, and *Home Office* reveal that the Consumer segment accounts for over 50% of sales.
+- **Discount Band Impact** – Demonstrates the erosion of margins at higher discount levels, supporting strategic pricing decisions.
 
 
 ### Page 2 – Quarterly Insights
 
  ![Table & Matrix – Page 2](images/report/quarterly_insights.png "Page 2: Table & Matrix report showing top selling products and average ship time")
 
+The second page of the Power BI report focuses on **temporal sales performance**, enabling a deeper understanding of trends, seasonality, and growth patterns over multiple years.  
+
+- **Multi‑level Breakdown** – Sales are visualized by **Year → Quarter → Month**, making it easy to identify peaks, dips, and cyclical patterns.  
+- **Growth & Decline Markers** – Each data point includes both the monetary change and the percentage shift versus the previous period, giving instant context for performance swings.  
+- **Year‑over‑Year Patterns** – Strong growth phases (e.g., 2013’s triple‑digit quarterly gains) are contrasted with periods of slowdown or contraction, helping pinpoint where external or internal factors may have influenced results.  
+- **Seasonal Signals** – Recurring high‑performing months can be leveraged for targeted campaigns, inventory planning, and promotional strategies.  
+- **Performance Variability** – Certain months show notable losses despite otherwise strong quarters, highlighting potential operational or market‑driven challenges.  
+
 
 ### Page 3 – Regional Profit and Loss
 
 ![Map – Page 3](images/report/regional_profit_and_loss.png "Page 3: Map showing total sales by country and market")
+
+The third page drills into **geographic performance**, spotlighting profit and loss distribution across all regions in the dataset.  
+
+- **Top‑Performing Regions** –  
+  - **Western Europe** leads with **$218K profit**, followed by strong results in **Eastern Asia**, **Southern Asia**, and **Central America** (all around $159K–$167K).  
+  - Established markets like **Oceania** and **US (East & West)** also contribute significant positive margins.  
+- **Moderate Profit Zones** –  
+  - Regions such as **Northern & Eastern Europe**, **North Africa**, and **Central US** post steady but smaller gains, indicating stable performance without rapid growth.  
+- **Loss‑Making Regions** –  
+  - The biggest loss is in **Western Asia** (‑$54K), followed closely by **Western Africa** (‑$50K) and **Central Asia** (‑$7K).  
+  - These markets may require deeper investigation to understand operational challenges, demand constraints, or cost structures.  
+
 
 
 ### Page 4 – Sales Breakdown
 
 ![Flow Chart – Page 4](images/report/sales_breakdown.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
 
-- Total Sales: $12,642,501.91  
-- Drill-down from Market → Region → Country → City → Segment  
-- Year and Month slicers (Year (2012–2016), Month (January-December))
+This page provides a **drill‑down view of sales** across multiple geographic and business dimensions, enabling granular exploration from global markets down to individual customer segments.  
+  
+- **Multi‑Level Hierarchy** – Sales are organized in a cascading structure:  
+  **Market → Region → Country → City → Segment**, making it easy to zoom in from macro to micro perspectives.  
+- **Market Leaders** –  
+  - **Asia Pacific** emerges as the largest market, with **Oceania** contributing over $1.10M in sales.  
+  - Within Oceania, **Australia** dominates at $925K+, with top‑selling cities such as **Sydney**, **Brisbane**, and **Gold Coast**.
+- **City‑Level Performance** – City sales figures reveal high‑value hubs (e.g., Sydney at $111K+) and mid‑tier performers, supporting localized strategy and marketing.  
+- **Segment Contribution** – Segment splits (*Consumer*, *Corporate*, *Home Office*) are shown for each city, highlighting differences in buying patterns across locations.  
+- **Regional Comparisons** – Other high‑value markets include **Europe** ($3.28M), **USCA** ($2.36M), and **LATAM** ($2.16M), with Africa and parts of Asia contributing smaller but still notable volumes.  
 
 
 ### Page 5 – Global Sales Overview
 
 ![Flow Chart – Page 4](images/report/global_sales_overview.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
 
-- World map with circle markers sized by Sales  
-- Year and Month slicers (2012–2016, January–December)  
-- Market color legend (Africa, Asia Pacific, Europe, LATAM, USCA)  
+This page presents a **geospatial view of sales distribution**, enabling a quick visual grasp of market performance across the globe.  
+
+- **Market Segmentation by Geography** –  
+  Countries are grouped into major markets (Africa, Asia Pacific, Europe, LATAM, USCA), with clear color‑coding for instant regional identification.  
+- **Sales Volume Indicators** –  
+  The size of each marker on the map correlates with total sales, making it easy to spot high‑revenue countries at a glance.  
+- **High‑Performing Regions** –  
+  Larger clusters and markers in areas such as **North America**, **Western Europe**, and **Asia Pacific** indicate significant market contributions.  
+- **Emerging & Niche Markets** –  
+  Smaller markers in parts of Africa, South America, and Central Asia suggest untapped or developing potential, offering opportunities for growth strategies.  
 
 
 ### Page 6 – Performance Summary
 
 ![Flow Chart – Page 4](images/report/performance_summary.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
 
-- Top 20 Selling Products 
-- Average ship time (days) matrix by Region × Ship Mode 
+The final page consolidates **product‑level performance** with **operational efficiency metrics**, providing both revenue insights and service quality indicators in a single view.  
+
+
+- **Top‑Selling Products** –  
+  - Highlights the **Top 20 products by total sales**, led by the *Apple Smart Phone, Full Size* ($86.9K) and other high‑volume items.  
+  - The full list accounts for over **$1.02M in sales**, offering a clear view of the product mix driving the largest share of revenue.  
+
+- **Operational Metrics – Average Ship Time** –  
+  - Tracks average delivery times across four shipping classes (*First Class*, *Same Day*, *Second Class*, *Standard Class*) for each region.  
+  - Notable variations in ship times by region suggest opportunities to streamline logistics in slower markets without compromising cost efficiency. 
 
 
 ## Results
@@ -154,9 +202,6 @@ This repository delivers a complete Power BI solution, covering:
   - The **20–85% discount band** resulted in a **net loss** of **$814,682.09**.  
 
 
-## Key Features
-
-
 ## Tools and Technologies
 - Power BI Desktop
 - Microsoft Excel 2021
@@ -174,14 +219,16 @@ This repository delivers a complete Power BI solution, covering:
 │   └── global_superstore_2016.xlsx
 ├── images/
 │   ├── data_model/
-│   │   └── Model_View.png
+│   │   └── model_view.png
 │   ├── issues/
 │   │   └── issues_log.png
 │   ├── report/
-│   │   ├── Dashboard.png
-│   │   ├── Table_and_Matrix.png
-│   │   ├── Map.png
-│   │   └── Flow_Chart.png
+│   │   ├── executive_summary.png
+│   │   ├── quarterly_insights.png
+│   │   ├── regional_profit_and_loss.png
+│   │   ├── sales_breakdown.png
+│   │   ├── global_sales_overview.png
+│   │   └── performance_summary.png
 │   └── report_pages.png
 ├── report/
 │   └── global_superstore_report.pbix
@@ -200,7 +247,4 @@ This repository delivers a complete Power BI solution, covering:
 4. In Power BI Desktop, go to Transform data → Data source settings, and point the Excel data source to data/cleaned_global_superstore_2016.xlsx.
 5. In the Navigator window, select the Cleaned_Orders and Returns sheets, then click Load.
 6. Click Refresh to load and apply all preconfigured Power Query transforms.
-7. Explore the report:
-    - Navigate dashboard pages
-    - Use slicers to filter by region, category, time period, etc.
-    - Drill through on any chart to see transaction-level details
+7. Explore the report.
