@@ -14,7 +14,7 @@
 - [Getting Started](#Getting-Started)
 
 ## Introduction
-An end-to-end analytics solution built on the Global Superstore dataset. Explore data cleaning, a star schema model, key DAX measures and interactive report pages.
+Built on the Global Superstore dataset, this end‑to‑end analytics initiative integrates rigorous data preparation, PostgreSQL‑based metrics, star‑schema modeling, and targeted DAX measures into a unified intelligence framework. Its interactive Power BI dashboards deliver precise, actionable insights that enable strategic decision‑making and sustained business growth.
 
 ![Report Overview](images/report_pages.png "Pages of Report")
 
@@ -30,28 +30,30 @@ The Global Superstore analytics team requires an interactive Power BI report tha
 
 ## Project Overview
 
-This repository delivers a complete Power BI solution, covering:
+This project delivers a complete end-to-end analytics solution, covering:
 
 1. Data Ingestion & Cleaning  
-   - Load the 2016 Global Superstore Excel dataset.  
+   - Load the Global Superstore 2016 Excel dataset.  
    - Remove or correct invalid records, standardize geography, flag profit/loss.  
 
-2. Star-Schema Data Modeling  
-   - Build fact and dimension tables (Sales, Customer, Product, Date, Order).  
-
-3. DAX Measure Development  
-   - Define core KPIs: Total Sales, Profit, Loss, Profit Margin, Average Order Value, Return Rate.  
-
-4. PostgreSQL Analytics & Metrics Materialization  
+2. PostgreSQL Analytics & Metrics Materialization  
    - Create a materialized view `global_superstore_orders_metrics` summarizing total records, sales, profit breakdowns, margins, average order value, and profit per order.  
    - Use a PL/pgSQL `DO` block with `RAISE NOTICE` to print a formatted metrics report.  
-   - Run queries for region- and year-level profit/sales, segment sales, discount-band analysis, top-selling product, and average ship times by region & ship mode.  
+   - Run queries for region- and year-level profit/sales, segment sales, discount-band analysis, top-selling product, and average ship times by region & ship mode.
 
-5. Interactive Power BI Report  
-   - Page 1: Executive Dashboard with KPI cards, trend lines, segment share, discount impact.  
-   - Page 2: Table & Matrix showing top products and average ship times by region/mode.  
-   - Page 3: Geographic Map of sales volumes with Year & Month slicers.
-   - Page 4: Flow Chart drill-down across Market → Region → Country → City → Segment, enriched with drill-through filters. 
+3. Star-Schema Data Modeling  
+   - Build fact and dimension tables (Sales, Customer, Product, Date, Order).  
+
+4. DAX Measure Development  
+   - Define core KPIs: Total Sales, Profit, Loss, Profit Margin, Average Order Value, Return Rate. 
+
+5. Interactive Power BI Report Pages:  
+    - **Executive Summary:** Consolidated KPIs (Sales, Profit, Margins, AOV, Profit per Order) with visual breakdowns by region, year, segment, and discount band to surface key performance drivers and risk areas.  
+    - **Quarterly Insights:** Year/quarter/month sales trend analysis with percentage change and variance annotations to reveal seasonal patterns and growth/decline cycles.  
+    - **Regional Profit and Loss:** Profitability map by region, with clear profit/loss differentiation and drillable time-based filters for targeted market analysis.  
+    - **Sales Breakdown:** Hierarchical view from Market → Region → Country → City → Segment, enabling granular exploration of sales contribution at each level.  
+    - **Global Sales Overview:** Interactive geographic map with market color-coding and proportional sales bubbles for instant visual understanding of regional performance.  
+    - **Performance Summary:** Ranked Top 20 Products by revenue and comparative shipping time matrix by region and shipping mode for product strategy and logistics optimization.  
 
 
 ## Dataset
