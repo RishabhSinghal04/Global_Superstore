@@ -16,7 +16,7 @@
 ## Introduction
 Built on the Global Superstore dataset, this end‑to‑end analytics initiative integrates rigorous data preparation, PostgreSQL‑based metrics, star‑schema modeling, and targeted DAX measures into a unified intelligence framework. Its interactive Power BI dashboards deliver precise, actionable insights that enable strategic decision‑making and sustained business growth.
 
-![Report Overview](images/report_pages.png "Pages of Report")
+![Report Pages](images/report_pages.png "Report Pages")
 
 
 ## Problem Statement
@@ -95,7 +95,7 @@ This structure ensures fast query performance and simplifies the creation of das
 
 ### Page 1 – Executive Summary
 
-![Dashboard – Page 1](images/report/executive_summary.png "Page 1: Dashboard showing key metrics and visualizations")
+![Page 1 – Executive Summary](images/report/executive_summary.png)
 
 The **Power BI** report opens with a high‑level performance snapshot, combining headline KPIs with regional, temporal, and segment‑based insights.  
 
@@ -108,7 +108,7 @@ The **Power BI** report opens with a high‑level performance snapshot, combinin
 
 ### Page 2 – Quarterly Insights
 
- ![Table & Matrix – Page 2](images/report/quarterly_insights.png "Page 2: Table & Matrix report showing top selling products and average ship time")
+ ![Page 2 – Quarterly Insights](images/report/quarterly_insights.png)
 
 The second page of the Power BI report focuses on **temporal sales performance**, enabling a deeper understanding of trends, seasonality, and growth patterns over multiple years.  
 
@@ -121,7 +121,7 @@ The second page of the Power BI report focuses on **temporal sales performance**
 
 ### Page 3 – Regional Profit and Loss
 
-![Map – Page 3](images/report/regional_profit_and_loss.png "Page 3: Map showing total sales by country and market")
+![Page 3 – Regional Profit and Loss](images/report/regional_profit_and_loss.png)
 
 The third page drills into **geographic performance**, spotlighting profit and loss distribution across all regions in the dataset.  
 
@@ -138,7 +138,7 @@ The third page drills into **geographic performance**, spotlighting profit and l
 
 ### Page 4 – Sales Breakdown
 
-![Flow Chart – Page 4](images/report/sales_breakdown.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
+![Page 4 – Sales Breakdown](images/report/sales_breakdown.png)
 
 This page provides a **drill‑down view of sales** across multiple geographic and business dimensions, enabling granular exploration from global markets down to individual customer segments.  
   
@@ -154,7 +154,7 @@ This page provides a **drill‑down view of sales** across multiple geographic a
 
 ### Page 5 – Global Sales Overview
 
-![Flow Chart – Page 4](images/report/global_sales_overview.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
+![Page 5 – Global Sales Overview](images/report/global_sales_overview.png)
 
 This page presents a **geospatial view of sales distribution**, enabling a quick visual grasp of market performance across the globe.  
 
@@ -170,7 +170,7 @@ This page presents a **geospatial view of sales distribution**, enabling a quick
 
 ### Page 6 – Performance Summary
 
-![Flow Chart – Page 4](images/report/performance_summary.png "Page 4: Flow Chart breaking down total sales by market, region, country, city, and segment")
+![Page 6 – Performance Summary](images/report/performance_summary.png)
 
 The final page consolidates **product‑level performance** with **operational efficiency metrics**, providing both revenue insights and service quality indicators in a single view.  
 
