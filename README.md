@@ -8,7 +8,7 @@
 - [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)
 - [Data Model](#Data-Model)
 - [Report Overview](#Report-Overview)
-- [Results](#Results)
+- [Business Performance Analysis](#Business-Performance-Analysis)
 - [Tools and Technologies](#Tools-and-Technologies)
 - [File Structure](#File-Structure)
 - [Getting Started](#Getting-Started)
@@ -184,25 +184,38 @@ The final page consolidates **product‑level performance** with **operational e
   - Notable variations in ship times by region suggest opportunities to streamline logistics in slower markets without compromising cost efficiency. 
 
 
-## Results
+## Business Performance Analysis
 
-- **Year-over-Year Growth:**  
-  Total sales increased from **$2,677,438.69** in **2013** to **$3,405,746.45** in **2014**, marking the **highest year-over-year growth** in the **2012–2015** period at **27.20%**.  
+### Year-over-Year Growth
+Total sales increased from **$2,677,438.69 in 2013** to **$3,405,746.45 in 2014**, representing a **27.20% growth rate**.  
+This was the strongest annual increase in the 2012–2015 period, highlighting a phase of accelerated expansion and market traction.
 
-- **Regional Performance:**  
-  - **Western Europe** recorded the **highest sales** at **$1,731,929.67** and the **highest total profit** at **$314,970.32**, with a **net profit and loss** figure of **$218,433.51**, leading all regions.  
-  - By market, **Asia Pacific** achieved the **highest total sales** at **$4,042,658.27**, followed by **Europe** with **$3,287,336.23**.  
+### Regional Performance
+- **Western Europe** recorded the highest sales at **$1,731,929.67** and the highest total profit at **$314,970.32**, with a net contribution of **$218,433.51**.  
+- By market, **Asia Pacific led with $4,042,658.27 in sales**, followed by **Europe with $3,287,336.23**.  
 
-- **Customer Segments:**  
-  The **Consumer** segment dominated sales with **$6,507,949.42** (**51.48%**), followed by **Corporate** (**30.25%**) and **Home Office** (**18.27%**).  
+This indicates that while Asia Pacific drives top-line revenue through scale, Western Europe delivers stronger profitability, suggesting different strategic levers for each region.
 
-- **Quarterly Sales Trends:**  
-  Sales **consistently peaked** in the **final month** of each quarter across most years.  
+### Customer Segments
+- **Consumer segment** accounted for **$6,507,949.42 (51.48%)** of total sales.  
+- **Corporate** contributed **30.25%**, and **Home Office** represented **18.27%**.  
 
-- **Discount Band Insights:**  
-  - The **0–5% discount band** generated the **highest sales** (**$7,253,806.57**) and the **highest profit and loss figure** (**$1,828,671.85**).  
-  - The **20–85% discount band** resulted in a **net loss** of **$814,682.09**.  
+The dominance of the Consumer segment underscores strong B2C performance but also highlights a concentration risk that could be mitigated by expanding Corporate and Home Office penetration.
 
+### Quarterly Sales Trends
+Sales consistently **peaked in the final month of each quarter**, reflecting end-of-quarter pushes likely influenced by promotions, budget cycles, or sales incentives.
+
+### Discount Band Insights
+- The **0–5% discount band** generated the **highest sales ($7,253,806.57)** and the **highest profit ($1,828,671.85)**, confirming that minimal discounting maximizes profitability.  
+- In contrast, the **20–85% discount band** resulted in a **net loss of $814,682.09**, demonstrating the margin erosion caused by aggressive discounting.
+
+### Business Value
+1. Replicate **Western Europe’s profitability model** in other regions.  
+2. Leverage **Asia Pacific’s scale** while improving margin discipline.  
+3. Diversify revenue streams by strengthening **Corporate and Home Office** segments.  
+4. Align supply chain and marketing with **quarter-end demand surges**.  
+5. Protect margins by **limiting deep discounting** and focusing on value-driven pricing.
+  
 
 ## Tools and Technologies
 - Power BI Desktop
